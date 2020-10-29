@@ -70,4 +70,13 @@
   <div *ngIf="!datosCorrectos" class="alert alert-warning" role="alert">
     {{ textoError }}
   </div>
+
+  <ngx-spinner
+    bdColor="rgba(0, 0, 0, 0.8)"
+    size="large"
+    color="#fff"
+    type="line-scale-pulse-out-rapid"
+    [fullScreen]="true"
+    ><p style="color: white">Ingresando...</p></ngx-spinner
+  >
 </div>

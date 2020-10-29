@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from "ngx-spinner";
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AccordionModule.forRoot(),
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxSpinnerModule
   ],
   providers: [AngularFireAuth],
   bootstrap: [AppComponent]
