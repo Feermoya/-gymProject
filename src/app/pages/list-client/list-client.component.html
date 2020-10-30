@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h4>Listado de clientes</h4>
+  <form action="">
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="text"
+        class="form-control-file"
+        placeholder="Buscar cliente...."
+      />
+    </div>
+  </form>
+
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let cliente of clientes">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://vistapointe.net/images/client-wallpaper-4.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ cliente.nombre }}</h5>
+          <p>Dni: {{ cliente.dni }}</p>
+          <a href="#" class="card-link">Editar</a>
+          <a href="#" class="card-link text-danger">Desactivar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
