@@ -1,3 +1,4 @@
+import { AlertService } from './services/alert/alert.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,12 +15,14 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ListClientComponent } from './pages/list-client/list-client.component';
+import { AddClientComponent } from './pages/add-client/add-client.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    ListClientComponent
+    ListClientComponent,
+    AddClientComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { ListClientComponent } from './pages/list-client/list-client.component';
     NgxSpinnerModule,
     BsDropdownModule.forRoot()
   ],
-  providers: [AngularFireAuth, AngularFirestore],
+  providers: [AngularFireAuth, AngularFirestore, AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,153 @@
+<div class="container mt-5">
+  <form [formGroup]="formClient">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Agregar nombre"
+            formControlName="nombre"
+          />
+          <div
+            *ngIf="
+              formClient.controls['nombre'].invalid &&
+              formClient.controls['nombre'].dirty
+            "
+            class="alert alert-danger"
+            role="alert"
+          >
+            <span *ngIf="formClient.controls['nombre'].errors.required"
+              >El nombre es requerido</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="">Apellido</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Agregar apellido"
+            formControlName="apellido"
+          />
+          <div
+            *ngIf="
+              formClient.controls['apellido'].invalid &&
+              formClient.controls['apellido'].dirty
+            "
+            class="alert alert-danger"
+            role="alert"
+          >
+            <span *ngIf="formClient.controls['apellido'].errors.required"
+              >El apellido es requerido</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Agregar email"
+            formControlName="email"
+          />
+          <div
+            *ngIf="
+              formClient.controls['email'].invalid &&
+              formClient.controls['email'].dirty
+            "
+            class="alert alert-danger"
+            role="alert"
+          >
+            <span *ngIf="formClient.controls['email'].errors.required"
+              >Correo es requerido</span
+            >
+            <span *ngIf="formClient.controls['email'].errors.email"
+              >Correo no es valido</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="">Dni</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Agregar dni"
+            formControlName="dni"
+          />
+          <div
+            *ngIf="
+              formClient.controls['dni'].invalid &&
+              formClient.controls['dni'].dirty
+            "
+            class="alert alert-danger"
+            role="alert"
+          >
+            <span *ngIf="formClient.controls['dni'].errors.required"
+              >El Dni es requerido</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="">Fecha Nacimientp</label>
+          <input
+            type="date"
+            class="form-control"
+            placeholder="Agregar fecha de nacimiento"
+            formControlName="fechaNacimiento"
+          />
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="">Telefono</label>
+          <input
+            type="tel"
+            class="form-control"
+            placeholder="Agregar numero de telefono"
+            formControlName="telefono"
+          />
+          <div
+            *ngIf="
+              formClient.controls['telefono'].invalid &&
+              formClient.controls['telefono'].dirty
+            "
+            class="alert alert-danger"
+            role="alert"
+          >
+            <span *ngIf="formClient.controls['telefono'].errors.required"
+              >El telefono es requerido</span
+            >
+          </div>
+        </div>
+      </div>
+      <button
+        *ngIf="!esEditable"
+        class="btn btn-primary"
+        [disabled]="formClient.invalid"
+        (click)="agregar()"
+      >
+        Agregar
+      </button>
+      <button
+        *ngIf="esEditable"
+        class="btn btn-primary"
+        [disabled]="formClient.invalid"
+        (click)="editar()"
+      >
+        Editar
+      </button>
+    </div>
+  </form>
+</div>
