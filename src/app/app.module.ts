@@ -16,13 +16,15 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ListClientComponent } from './pages/list-client/list-client.component';
 import { AddClientComponent } from './pages/add-client/add-client.component';
+import { PricesComponent } from './pages/prices/prices.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
     ListClientComponent,
-    AddClientComponent
+    AddClientComponent,
+    PricesComponent
   ],
   imports: [
     BrowserModule,

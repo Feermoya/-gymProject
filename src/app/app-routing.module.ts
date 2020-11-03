@@ -1,3 +1,4 @@
+import { PricesComponent } from './pages/prices/prices.component';
 import { AddClientComponent } from './pages/add-client/add-client.component';
 import { ListClientComponent } from './pages/list-client/list-client.component';
 import { NgModule } from '@angular/core';
@@ -12,7 +13,11 @@ const routes: Routes = [
   },
   {
     path: 'agregar-cliente/:clientId', component: AddClientComponent
+  },
+  {
+    path: 'precios', component: PricesComponent
   }
+
 ];
 
 @NgModule({
