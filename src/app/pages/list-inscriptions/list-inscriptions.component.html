@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Cliente</th>
+        <th scope="col">Fecha de Incio</th>
+        <th scope="col">Fecha Final</th>
+        <th scope="col">Dni</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let inscripcion of inscripciones">
+        <th scope="row">
+          {{ inscripcion.clienteObtenido.nombre }}
+          {{ inscripcion.clienteObtenido.apellido }}
+        </th>
+        <td>{{ inscripcion.fecha | date }}</td>
+        <td>{{ inscripcion.fechaFinal | date }}</td>
+        <td>{{ inscripcion.clienteObtenido.dni }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

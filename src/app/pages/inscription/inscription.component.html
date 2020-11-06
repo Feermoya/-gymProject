@@ -1,0 +1,66 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-6">
+      <app-select-client
+        [nombre]="clienteSeleccionado.nombre"
+        (seleccionoCliente)="asignarCliente($event)"
+        (canceloCliente)="eliminarCliente()"
+      ></app-select-client>
+      <div>
+        <label for="">Precio</label>
+        <select
+          [(ngModel)]="idPrecio"
+          (change)="seleccionarPrecio($event.target.value)"
+          class="form-control"
+          name=""
+          id=""
+        >
+          <option [value]="null">Seleccione un precio</option>
+          <option *ngFor="let price of precios" [value]="price.id">
+            {{ price.nombre }}
+          </option>
+        </select>
+      </div>
+      <div>
+        <label for="">Fecha Inicio</label>
+        <input
+          class="form-control"
+          [value]="inscription.fecha | date"
+          type="text"
+          disabled
+        />
+      </div>
+      <div>
+        <label for="">Fecha Final</label>
+        <input
+          class="form-control"
+          [value]="inscription.fechaFinal | date"
+          type="text"
+          disabled
+        />
+      </div>
+
+      <div>
+        <label for="">Total</label>
+        <input
+          class="form-control"
+          [value]="inscription.total"
+          type="number"
+          disabled
+        />
+      </div>
+
+      <button class="btn btn-primary" (click)="guardar()">Guardar</button>
+    </div>
+    <div class="col-sm-6">
+      <div class="card" *ngIf="clienteSeleccionado.dni">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ clienteSeleccionado.nombre }} {{ clienteSeleccionado.apellido }}
+          </h5>
+          <p>Dni: {{ clienteSeleccionado.dni }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

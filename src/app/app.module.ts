@@ -17,6 +17,10 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ListClientComponent } from './pages/list-client/list-client.component';
 import { AddClientComponent } from './pages/add-client/add-client.component';
 import { PricesComponent } from './pages/prices/prices.component';
+import { InscriptionComponent } from './pages/inscription/inscription.component';
+import { SelectClientComponent } from './pages/select-client/select-client.component';
+import { ListInscriptionsComponent } from './pages/list-inscriptions/list-inscriptions.component';
+import { HomeComponent } from './pages/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,11 @@ import { PricesComponent } from './pages/prices/prices.component';
     NavbarComponent,
     ListClientComponent,
     AddClientComponent,
-    PricesComponent
+    PricesComponent,
+    InscriptionComponent,
+    SelectClientComponent,
+    ListInscriptionsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
