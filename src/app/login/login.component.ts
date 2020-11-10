@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       this.datosCorrectos = true;
       this.spinner.show();
       this.serviceAuth.signInWithEmailAndPassword(this.formularioLogin.value.email, this.formularioLogin.value.password).then((user) => {
-        console.log(user);
+        // console.log(user);
         this.spinner.hide();
       }).catch((error) => {
         //cuando el usuario no existe

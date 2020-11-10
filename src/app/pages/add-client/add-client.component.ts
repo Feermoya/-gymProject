@@ -32,7 +32,7 @@ export class AddClientComponent implements OnInit {
     if (this.id != undefined) {
       this.esEditable = true;
       this.db.doc<any>('clientes' + '/' + this.id).valueChanges().subscribe((cliente) => {
-        console.log(cliente);
+        // console.log(cliente);
         this.formClient.setValue({
           nombre: cliente.nombre,
           apellido: cliente.apellido,

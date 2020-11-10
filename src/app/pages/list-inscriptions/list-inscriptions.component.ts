@@ -23,7 +23,6 @@ export class ListInscriptionsComponent implements OnInit {
           inscripcionObtenida.fecha = new Date(inscripcionObtenida.fecha.seconds * 1000);
           inscripcionObtenida.fechaFinal = new Date(inscripcionObtenida.fechaFinal.seconds * 1000);
           this.inscripciones.push(inscripcionObtenida);
-          console.log(inscripcionObtenida);
         });
       });
     });
